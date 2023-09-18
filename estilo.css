@@ -1,0 +1,127 @@
+/* Definição de variáveis */
+:root {
+    --main-radius: 5px; /* Raio de borda padrão */
+    --main-padding: 5px; /* Preenchimento padrão */
+}
+
+/* Estilos gerais para o corpo da página */
+body {
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Estilos para cabeçalhos e parágrafos */
+h1, h2, h3, p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: var(--main-padding);
+}
+
+/* Estilos para o contêiner principal */
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 0.5fr;
+    grid-gap: 0.2rem;
+    grid-template-areas:
+        "nav nav nav"
+        "main main main"
+        "content1 content2 content3"
+        "footer footer footer";
+}
+
+/* Estilos para a barra de navegação */
+nav {
+    grid-area: nav;
+    background-color: #FFDEAD;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/* Estilos para o conteúdo principal */
+main {
+    grid-area: main;
+    background-color: #fdd291;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/* Estilos para as seções de conteúdo */
+#content-1,
+#content-2,
+#content-3 {
+    background-color: #ff9900;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/* Estilos para o rodapé */
+footer {
+    grid-area: footer;
+    background-color: #e0921c;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/* Estilos para o menu de navegação */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.menu-itens {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.menu-lista {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Estilos para as imagens das receitas */
+#pao1,
+#pizza1,
+#salada1,
+#cozinha1,
+#logo {
+    width: 300px;
+    border-radius: 20px;
+    padding: var(--main-padding);
+}
+
+#cozinha1 {
+    width: 500px;
+    float: right;
+}
+
+#logo {
+    width: 100px;
+    float: left;
+    margin-right: 100px;
+}
+
+/* Estilos para o texto do rodapé */
+#footer {
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    margin-left: 460px;
+    display: flex;
+}
+
+/* Estilos para os ícones das redes sociais */
+#img-footer {
+    width: 100px;
+    border-radius: 20px;
+    padding: var(--main-padding);
+    margin-left: 180px;
+}
